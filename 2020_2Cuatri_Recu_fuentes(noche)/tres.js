@@ -11,5 +11,31 @@ c)el promedio de personas por viaje,  que viajan en invierno
 */
 function mostrar()
 {
-	alert("tres");
+	let nombre;
+	let lugar;
+	let temporada;
+	let cantidadPersonas;
+
+	do {
+		nombre = prompt("ingrese nombre del titular:");
+		lugar = prompt("ingrese un lugar: ");
+		if (lugar != "bariloche" && lugar != "cataratas" && lugar != "salta") {
+			lugar = prompt("Lugar mal ingresado. Ingrese un lugar: ");
+		}
+
+		temporada = prompt("ingrese temporada:");
+		if (temporada != "otono" && temporada != "invierno" && temporada != "primavera" && temporada != "verano") {
+			temporada = prompt("ERROR. ingrese temporada:");
+		}
+		cantidadPersonas = parseInt(prompt("ingrese numero de personas:"));
+		if (cantidadPersonas < 1 && isNaN(cantidadPersonas)) {
+			cantidadPersonas = parseInt(prompt("Ingrese Numero Correcto de personas:"));
+		}
+
+		//a)el lugar más elegido
+		//b)el nombre de titular que lleva más pasajeros.
+		//c)el promedio de personas por viaje,  que viajan en invierno
+		
+	}
+
 }
